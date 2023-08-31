@@ -30,3 +30,25 @@ Update:
 Remove:
 ```
 
+### 开发规范
+
+#### 接口规范
+
+```
+https://blog.csdn.net/LMGD_/article/details/124371107
+
+GET http://localhost:8080/admin/user （查询用户）
+POST http://localhost:8080/admin/user （新增用户）
+PUT http://localhost:8080/admin/user （更新用户，全部字段更新，patch部分字段更新）
+DELETE http://localhost:8080/admin/user （删除用户）
+
+
+URI 不能包含动词，只能是名词（命名名词的时候，要使用小写、数字及下划线来区分多个单词）。
+资源的路径应该从根到子依次如下:
+/{resources}/{resource_id}/{sub_resources}/{sub_resource_id}/{sub_resource_property}
+【POST】 /v1/users/{user_id}/roles/{role_id} // 添加用户的角色
+有的时候，当一个资源变化难以使用标准的 RESTful API 来命名，可以考虑使用一些特殊的 actions 命名。
+/{resources}/{resource_id}/actions/{action}
+【PUT】 /v1/users/{user_id}/password/actions/modify // 密码修改
+```
+
