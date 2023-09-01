@@ -27,7 +27,7 @@ public class OrderController {
 
     // 方式2 推荐
     @RequestMapping("/add/action/feign")
-    public String addActionFeign(){
+    public String addActionFeign() throws InterruptedException {
         System.out.println("下单成功!");
         String msg = stockFeignService.reduct();
         return "Hello Feign"+msg;

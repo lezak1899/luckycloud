@@ -1,6 +1,7 @@
 package edu.lingnan.stock.controller;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,8 +14,10 @@ public class StockController {
 
     @RequestMapping("/reduct")
     public String reduct() throws InterruptedException {
+//        测试fegin 的超时
+//        Thread.sleep(4000);
         System.out.println("扣减库存");
-        return "扣减库存:"+port;
+        return "扣减库存:"+port+"::id::";
     }
 
 

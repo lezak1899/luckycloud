@@ -24,3 +24,9 @@ feign:
     config:
       stock-service:
         loggerLevel: FULL
+        # 连接超时时间，默认2s
+        connectTimeout: 1000
+        # 请求处理超时时间，默认5s
+        readTimeout: 3000
+        requestInterceptors[0]:
+          edu.lingnan.order.intercptor.feign.CustomFeignInterceptor
