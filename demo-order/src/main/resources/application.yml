@@ -13,3 +13,14 @@ spring:
 stock-service:
   ribbon:
     NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule
+# springboot默认的日志级别是info ,feign的dubug日志级别就不会输入
+logging:
+  level:
+    # 配置指定包输出日志
+    edu.lingnan.order.feign: debug
+# feign日志局部配置
+feign:
+  client:
+    config:
+      stock-service:
+        loggerLevel: FULL
