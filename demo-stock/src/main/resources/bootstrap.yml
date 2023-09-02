@@ -1,35 +1,27 @@
 spring:
   application:
-    # 会自动根据服务名拉取dataid对应的配置文件。  如果dataid跟服务名不一致 就需要手动指定dataid
-    # 跟服务名相同的dataid的配置文件，称之为默认的配置文件
-    # 除了默认的配置文件 ，其他配置文件必须写上后缀
-    name: edu.lingnan.demo-stock
+    name: demo-stock
   cloud:
     nacos:
       server-addr: 127.0.0.1:8848
       username: nacos
       password: nacos
-      # 解决控制台循环打印ClientWorker日志
-      #config:
-      #  namespace: dev
-
-      # Nacos客户端 默认是Properties的文件扩展名 (只针对默认配置文件和profile)
-      # 一旦修改成了非Properties格式，则必须通过file-extension进行设置
       config:
-#        file-extension: yaml
+        file-extension: yaml
         #refresh-enabled: false   nacos客户端将无法感知配置的变化
         namespace: dev
         group: DEFAULT_GROUP
+        # 配置文件的优先级（优先级大的会覆盖优先级小的， 并且会形成互补）
+        # profile> 默认配置文件>extension-configs(下标越大优先级就越大)>shared-configs(下标越大优先级就越大)
 #        shared-configs:
 #          - data-id: edu.lingnan.demo-order  #[0]
 #            refresh: true
 #            #group:  默认是Default-group
 #          - data-id: com.tulingmall.common02.properties #[1]
 #            refresh: true
-#        extension-configs[0]:
-#          data-id: com.tulingmall.common03.properties
-#          refresh: true
+        extension-configs[0]:
+          data-id: demo-stock.yml
+          refresh: true
 
 
-# 配置文件的优先级（优先级大的会覆盖优先级小的， 并且会形成互补）
-# profile> 默认配置文件>extension-configs(下标越大优先级就越大)>shared-configs(下标越大优先级就越大)
+
