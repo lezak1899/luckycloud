@@ -11,6 +11,21 @@ set MODE="standalone"
 后它会启动一个命令窗口，里面有输出， 找到nacos的启动地址，我的是http://192.168.23.1:8848/nacos/index.html
 默认账号：nacos
 默认密码：nacos
+
+
+Nacos 配置中心
+https://github.com/alibaba/spring-cloud-alibaba/wiki/Nacos-config
+
+给 nacos 配置数据源
+D:\Program Files\nacos\conf\application.properties
+开启以下配置
+spring.datasource.platform=mysql
+db.num=1
+db.url.0=jdbc:mysql://127.0.0.1:3307/nacos?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
+db.user.0=root
+db.password.0=123456
+
+执行/数据脚本/nacos/nacos.sql脚本
 ```
 
 ### 提交规范
