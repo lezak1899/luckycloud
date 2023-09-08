@@ -1,9 +1,9 @@
 ### 快速开始
 
 本地安装nacos
-去 [GitHub](https://github.com/alibaba/nacos/releases/tag/1.4.1) 下载安装包，并将其解压到你想要的目录下（例如：`D:\Program Files\nacos\bin`）。
+去 [GitHub](https://github.com/alibaba/nacos/releases/tag/1.4.1) 下载安装包，并将其解压到你想要的目录下（例如：D:\Program Files\nacos\bin）。
 修改 `D:\Program Files\nacos\bin\startup.cmd` 文件，在本地开发时将 `MODE` 设置为 `"standalone"`，然后双击 `D:\Program Files\nacos\bin\startup.cmd` 启动 nacos。
-启动后，会弹出一个命令窗口，其中会输出 nacos 的启动地址，例如：`http://192.168.23.1:8848/nacos/index.html`。
+启动后，会弹出一个命令窗口，其中会输出 nacos 的启动地址，例如：http://192.168.23.1:8848/nacos/index.html。
 默认的账号和密码为：
 
 - 账号：nacos
@@ -64,4 +64,5 @@ DELETE http://localhost:8080/admin/user
 - URI 应该只包含名词，不要包含动词，使用小写字母、数字和下划线来区分多个单词。
 - 资源的路径应该从根到子逐级命名，例如：
   - `/{resources}/{resource_id}/{sub_resources}/{sub_resource_id}/{sub_resource_property}`
-- 在某些情况下，如果使用标准的 RESTful
+- 在某些情况下，如果使用标准的 RESTful API 命名困难，可以考虑使用特殊的 actions 命名，例如：
+  - `/{resources}/{resource_id}/actions/{action}`
