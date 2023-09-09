@@ -13,6 +13,6 @@ public class StockApplication {
         ConfigurableApplicationContext applicationContext =  SpringApplication.run(StockApplication.class,args);
         String userName = applicationContext.getEnvironment().getProperty("user.name");
         String port = applicationContext.getEnvironment().getProperty("server.port");
-        System.out.println(userName+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"+port);
+        System.out.println(userName+"!!!!!!!!!!!!!!!!!!!中文!!!!!!!!!!!!!!!!!!!!!"+port);
     }
 }

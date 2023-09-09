@@ -10,7 +10,6 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
-
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
@@ -20,9 +19,8 @@ public class OrderApplication {
 
         // applicationContext 可以活动说有的参数信息
         ConfigurableApplicationContext applicationContext = SpringApplication.run(OrderApplication.class, args);
-        String userName = applicationContext.getEnvironment().getProperty("demo.username");
-        String port = applicationContext.getEnvironment().getProperty("server.port");
-        System.out.println(userName+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"+port);
+        String redisPort = applicationContext.getEnvironment().getProperty("redis.port");
+        System.out.println("redisPort:::"+redisPort);
     }
 
 

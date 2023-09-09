@@ -66,3 +66,8 @@ DELETE http://localhost:8080/admin/user
   - `/{resources}/{resource_id}/{sub_resources}/{sub_resource_id}/{sub_resource_property}`
 - 在某些情况下，如果使用标准的 RESTful API 命名困难，可以考虑使用特殊的 actions 命名，例如：
   - `/{resources}/{resource_id}/actions/{action}`
+
+### Q&A
+
+1. 子项目出现乱码，怎么办？
+   请参阅https://blog.csdn.net/qq_41855453/article/details/130464650
