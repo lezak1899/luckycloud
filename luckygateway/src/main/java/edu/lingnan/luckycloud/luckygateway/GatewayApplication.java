@@ -1,4 +1,4 @@
-package edu.lingnan.gateway;
+package edu.lingnan.luckycloud.luckygateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
