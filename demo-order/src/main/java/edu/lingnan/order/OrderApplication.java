@@ -17,7 +17,6 @@ public class OrderApplication {
 
     public static void main(String[] args) throws InterruptedException {
 
-        // applicationContext 可以活动说有的参数信息
         ConfigurableApplicationContext applicationContext = SpringApplication.run(OrderApplication.class, args);
         String redisPort = applicationContext.getEnvironment().getProperty("redis.port");
         System.out.println("redisPort:::"+redisPort);

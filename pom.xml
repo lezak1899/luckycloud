@@ -6,7 +6,7 @@
         <module>business-eatingwhat</module>
         <module>demo-order</module>
         <module>demo-stock</module>
-        <module>gateway</module>
+        <module>luckygateway</module>
         <module>luckycore</module>
     </modules>
 <!-- 最顶级的spring版本依赖，所以子项目都会过来这里继承版本   -->
