@@ -22,12 +22,6 @@ spring:
         extension-configs[0]:
           data-id: demo-stock.yml
           refresh: true
-#ribbon:
-#  eager-load:
-#    # 开启ribbon饥饿加载
-#    enabled: true
-#    # 配置mall-user使用ribbon饥饿加载，多个使用逗号分隔
-#    clients: demo-stock
 
 
 

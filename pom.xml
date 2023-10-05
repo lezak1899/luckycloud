@@ -9,14 +9,7 @@
         <module>luckygateway</module>
         <module>luckycore</module>
     </modules>
-<!-- 最顶级的spring版本依赖，所以子项目都会过来这里继承版本   -->
-<!-- 注释掉，交给<dependencyManagement>去管理   -->
-<!--    <parent>-->
-<!--        <groupId>org.springframework.boot</groupId>-->
-<!--        <artifactId>spring-boot-starter-parent</artifactId>-->
-<!--        <version>2.3.11.RELEASE</version>-->
-<!--        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
-<!--    </parent>-->
+
     <groupId>edu.lingnan</groupId>
     <artifactId>luckycloud</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -29,19 +22,59 @@
         <spring.cloud.alibaba.version>2.2.5.RELEASE</spring.cloud.alibaba.version>
         <spring.boot.version>2.3.11.RELEASE</spring.boot.version>
         <spring.cloud.version>Hoxton.SR8</spring.cloud.version>
+        <junit.version>4.12</junit.version>
+        <mybatis.version>2.1.2</mybatis.version>
+        <mysql.version>8.0.33</mysql.version>
+        <mybatis.version>3.5.10</mybatis.version>
+        <mybatis-plus-boot-starter.version>3.4.0</mybatis-plus-boot-starter.version>
+        <lombok.version>1.18.10</lombok.version>
+        <hutool.version>5.8.18</hutool.version>
+        <aspectj.version>1.9.6</aspectj.version>
+        <rocketmq.version>2.2.2</rocketmq.version>
     </properties>
 
     <!-- 子项目会直接继承-->
     <dependencies>
+        <!-- MyBatis-->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${mybatis.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>${mybatis-plus-boot-starter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis-plus-boot-starter.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>${aspectj.version}</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
@@ -66,7 +99,6 @@
                 <scope>import</scope>
             </dependency>
 
-
             <!--Spring Cloud的版本管理-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -86,6 +118,5 @@
             </plugin>
         </plugins>
     </build>
-
 
 </project>

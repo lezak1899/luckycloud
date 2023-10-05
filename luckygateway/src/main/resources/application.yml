@@ -2,7 +2,7 @@ server:
   port: 8088
 spring:
   application:
-    name: gateway
+    name: luckygateway
   cloud:
     # gateway的配置
     gateway:
