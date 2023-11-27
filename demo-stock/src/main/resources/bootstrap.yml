@@ -1,9 +1,14 @@
 spring:
   application:
     name: demo-stock
+  datasource:
+    url: jdbc:mysql://118.89.48.53:3306/luckycloud
+    username: lucky_cloud_sys
+    password: lucky_cloud_sys
+    driver-class-name: com.mysql.cj.jdbc.Driver
   cloud:
     nacos:
-      server-addr: 127.0.0.1:8848
+      server-addr: 118.89.48.53:8848
       username: nacos
       password: nacos
       config:
@@ -22,12 +27,6 @@ spring:
         extension-configs[0]:
           data-id: demo-stock.yml
           refresh: true
-#ribbon:
-#  eager-load:
-#    # 开启ribbon饥饿加载
-#    enabled: true
-#    # 配置mall-user使用ribbon饥饿加载，多个使用逗号分隔
-#    clients: demo-stock
 
 
 

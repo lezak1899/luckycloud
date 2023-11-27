@@ -5,8 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-public class GatewayApplication {
+public class LuckyGatewayApplication {
     public static void main(String[] args) {
-        SpringApplication.run(GatewayApplication.class,args);
+        SpringApplication.run(LuckyGatewayApplication.class,args);
     }
 }

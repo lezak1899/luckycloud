@@ -1,0 +1,53 @@
+server:
+  port: 8089
+
+spring:
+  application:
+    name: luckycore
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3307/luckycore?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+  cloud:
+    # gateway的配置
+    gateway:
+      #路由规则
+      routes:
+        - id: order_route  # 路由的唯一标识，路由到order
+          uri: lb://demo-order  #需要转发的地址   lb: 使用nacos中的本地负载均衡策略  order-service服务名
+          #断言规则 用于路由规则的匹配
+          predicates:
+            - Path=/demo_order/**
+          filters: # 转发前取代哦第一次路径
+            - StripPrefix=1
+    #配置Nacos
+    nacos:
+      discovery:
+        server-addr: 118.89.48.53:8848
+        username: nacos
+        password: nacos
+
+
+
+mybatis-plus:
+  # xml地址
+  mapper-locations: classpath:mapper/**/*.xml
+  configuration:
+    # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    #开启驼峰命名法
+    map-underscore-to-camel-case: true
+
+# 定义线程池的核心线程数
+threadPool:
+  corePoolSize: 5
+  # 定义线程池的最大线程数
+  maxPoolSize: 10
+  # 定义线程池的队列容量
+  queueCapacity: 100
+  # 线程前缀名称，方便辨别
+  threadNamePrefix: eattingwhat-core-threadpool
+  # 非核心线程数的存活时间
+  keepAliveTime: 3600
+
