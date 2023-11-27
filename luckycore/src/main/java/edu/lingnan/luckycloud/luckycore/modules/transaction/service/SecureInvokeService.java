@@ -5,7 +5,6 @@ import cn.hutool.core.util.ReflectUtil;
 import cn.hutool.extra.spring.SpringUtil;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import com.sun.istack.internal.NotNull;
 import edu.lingnan.luckycloud.luckycore.modules.transaction.dao.SecureInvokeRecordDao;
 import edu.lingnan.luckycloud.luckycore.modules.transaction.domain.dto.SecureInvokeDTO;
 import edu.lingnan.luckycloud.luckycore.modules.transaction.domain.entity.SecureInvokeRecord;
@@ -121,7 +120,7 @@ public class SecureInvokeService {
         }
     }
 
-    @NotNull
+//    @NotNull
     private Object[] getArgs(SecureInvokeDTO secureInvokeDTO, List<Class<?>> parameterClasses) {
         JsonNode jsonNode = JsonUtils.toJsonNode(secureInvokeDTO.getArgs());
         Object[] args = new Object[jsonNode.size()];
@@ -132,7 +131,7 @@ public class SecureInvokeService {
         return args;
     }
 
-    @NotNull
+//    @NotNull
     private List<Class<?>> getParameters(List<String> parameterStrings) {
         return parameterStrings.stream().map(name -> {
             try {
