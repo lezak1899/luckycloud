@@ -14,5 +14,6 @@ public class StockApplication {
         String userName = applicationContext.getEnvironment().getProperty("user.name");
         String port = applicationContext.getEnvironment().getProperty("server.port");
         System.out.println(userName+":::"+port);
+        System.out.println("测试");
     }
 }
