@@ -1,0 +1,22 @@
+server:
+  port: 8010
+demo-stock:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule
+# springboot默认的日志级别是info ,feign的dubug日志级别就不会输入
+logging:
+  level:
+    # 配置指定包输出日志
+    edu.lingnan.order.feign: debug
+# feign日志局部配置
+feign:
+  client:
+    config:
+      demo-stock:
+        loggerLevel: FULL
+        # 连接超时时间，默认2s
+        connectTimeout: 1000
+        # 请求处理超时时间，默认5s
+        readTimeout: 3000
+        requestInterceptors[0]:
+          edu.lingnan.order.intercptor.feign.CustomFeignInterceptor
