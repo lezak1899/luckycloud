@@ -3,7 +3,7 @@
 </h1>
 <p align=center>
   <a href="http://www.moguit.cn">
-    <img src="README-image/images/gitee/favicon2.ico" alt="luckycloud" style="width:200px;height:200px">
+    ![输入图片说明](README-image/luckycloud-logo.png)
   </a>
 </p>
 <p align=center>
