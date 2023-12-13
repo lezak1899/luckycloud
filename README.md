@@ -3,7 +3,7 @@
 </h1>
 <p align=center>
   <a href="http://www.moguit.cn">
-    <img src="./doc/images/gitee/favicon2.ico" alt="luckycloud" style="width:200px;height:200px">
+    <img src="README-image/images/gitee/favicon2.ico" alt="luckycloud" style="width:200px;height:200px">
   </a>
 </p>
 <p align=center>
@@ -29,5 +29,5 @@
 [**luckycloud**](https://gitee.com/moxi159753/LearningNotes/raw/master/doc/images/qq/添加陌溪.png) 
 
 <p align=center>
-    <img src="./doc/images/qq/公众号2.jpg" width="500" />
+    <img src="README-image/images/qq/公众号2.jpg" width="500" />
 </p>
