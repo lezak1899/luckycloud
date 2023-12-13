@@ -2,9 +2,7 @@
     luckycloud
 </h1>
 <p align=center>
-  <a href="http://www.moguit.cn">
     ![输入图片说明](README-image/luckycloud-logo.png)
-  </a>
 </p>
 <p align=center>
    luckycloud，一个基于微服务架构的前后端分离的基础平台，用于快速搭建SpringCloud应用
