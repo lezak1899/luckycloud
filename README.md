@@ -7,7 +7,7 @@
   </a>
 </p>
 <p align=center>
-   luckycloud，一个基于微服务架构的前后端分离的基础平台系统，用于快速搭建springcloud开发平台
+   luckycloud，一个基于微服务架构的前后端分离的基础平台，用于快速搭建SpringCloud应用
 </p>
 <p align="center">
 <a target="_blank" href="https://gitee.com/moxi159753/mogu_blog_v2">
