@@ -2,7 +2,7 @@
     luckycloud
 </h1>
 <p align=center>
-    ![输入图片说明](README-image/luckycloud-logo.png)
+    ![输入图片说明](README-image/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20231213183730.png)
 </p>
 <p align=center>
    luckycloud，一个基于微服务架构的前后端分离的基础平台，用于快速搭建SpringCloud应用
