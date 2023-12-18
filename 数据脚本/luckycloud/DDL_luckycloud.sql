@@ -2,7 +2,7 @@ create database luckycloud;
 
 use luckycloud;
 
-CREATE TABLE `secure_invoke_record` (
+CREATE TABLE `lc_secure_invoke_record` (
     `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'id',
     `secure_invoke_json` json NOT NULL COMMENT '请求快照参数json',
     `status` tinyint(8) NOT NULL COMMENT '状态 1待执行 2已失败',
@@ -17,7 +17,7 @@ CREATE TABLE `secure_invoke_record` (
 ) ENGINE=InnoDB AUTO_INCREMENT=360 DEFAULT CHARSET=utf8mb4 COMMENT='本地消息表'
 
 
-CREATE TABLE `menu` (
+CREATE TABLE `lc_menu` (
     `id` varchar(50) NOT NULL COMMENT '主键',
     `f_id` varchar(50) DEFAULT NULL COMMENT '父级菜单id',
     `name` varchar(100) DEFAULT NULL COMMENT '菜单名称',
@@ -33,7 +33,7 @@ CREATE TABLE `menu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='菜单信息表'
 
 
-CREATE TABLE `role_menu` (
+CREATE TABLE `lc_role_menu` (
      `id` varchar(50) NOT NULL COMMENT '主键',
      `role_id` varchar(50) DEFAULT NULL COMMENT '角色id',
      `menu_id` varchar(50) DEFAULT NULL COMMENT '菜单id',
@@ -45,7 +45,7 @@ CREATE TABLE `role_menu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='角色菜单关联表'
 
 
-CREATE TABLE `role` (
+CREATE TABLE `lc_role` (
     `id` varchar(50) NOT NULL COMMENT '主键',
     `name` varchar(100) DEFAULT NULL COMMENT '角色名称',
     `type` varchar(10) DEFAULT NULL COMMENT '角色类型',
@@ -57,7 +57,7 @@ CREATE TABLE `role` (
     PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='角色信息表'
 
-CREATE TABLE `user_role` (
+CREATE TABLE `lc_user_role` (
      `id` varchar(50) NOT NULL COMMENT '主键',
      `user_id` varchar(50) DEFAULT NULL COMMENT '用户id',
      `role_id` varchar(50) DEFAULT NULL COMMENT '角色id',
@@ -69,10 +69,10 @@ CREATE TABLE `user_role` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户角色关联表'
 
 
-CREATE TABLE `user` (
+CREATE TABLE `lc_user` (
     `id` varchar(50) NOT NULL COMMENT '主键',
     `username` varchar(50) DEFAULT NULL COMMENT '用户名称，用于登陆',
-    `sex` varchar(2) DEFAULT NULL COMMENT '性别',
+    `gender` varchar(2) DEFAULT NULL COMMENT '性别',
     `password` varchar(50) DEFAULT NULL COMMENT '密码',
     `phone` varchar(11) DEFAULT NULL COMMENT '手机号码',
     `face_img` varchar(1000) DEFAULT NULL COMMENT '头像预览图',

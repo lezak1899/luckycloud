@@ -1,0 +1,21 @@
+server:
+  port: 8089
+
+spring:
+  application:
+    name: luckycore
+  cloud:
+    nacos:
+      server-addr: 118.89.48.53:8848
+      username: nacos
+      password: nacos
+      config:
+        file-extension: yaml
+        namespace: dev
+        group: DEFAULT_GROUP
+        extension-configs[0]:
+          data-id: luckycloud-basic-config.yml
+          refresh: true
+
+
+
