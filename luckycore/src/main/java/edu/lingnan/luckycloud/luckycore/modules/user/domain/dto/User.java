@@ -1,4 +1,4 @@
-package edu.lingnan.luckycloud.luckycore.modules.user.dao;
+package edu.lingnan.luckycloud.luckycore.modules.user.domain.dto;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -8,7 +8,7 @@ import lombok.Data;
 public class User {
     private String id;
     private String username;
-    private String sex;
+    private String gender;
     private String password;
     private String phone;
     private String faceImg;

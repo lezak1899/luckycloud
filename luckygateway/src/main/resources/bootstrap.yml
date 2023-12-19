@@ -1,0 +1,34 @@
+server:
+  port: 8088
+
+spring:
+  application:
+    name: luckygateway
+  cloud:
+    # 注册中心
+    nacos:
+      server-addr: 118.89.48.53:8848
+      username: nacos
+      password: nacos
+      config:
+        file-extension: yaml
+        namespace: dev
+        group: DEFAULT_GROUP
+        extension-configs[0]:
+          data-id: luckycloud-basic-config.yml
+          refresh: true
+    # gateway的配置
+    gateway:
+      #路由规则
+      routes:
+        - id: order_route  # 路由的唯一标识，路由到order
+          uri: lb://demo-order  #需要转发的地址   lb: 使用nacos中的本地负载均衡策略  order-service服务名
+          #断言规则 用于路由规则的匹配
+          predicates:
+            - Path=/demo_order/**
+          filters: # 转发前取代哦第一次路径
+            - StripPrefix=1
+
+
+
+
