@@ -7,6 +7,8 @@
         <module>demo-stock</module>
         <module>luckygateway</module>
         <module>luckycore</module>
+        <module>luckyauth</module>
+        <module>luckycommon</module>
     </modules>
 
     <groupId>edu.lingnan</groupId>
