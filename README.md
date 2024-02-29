@@ -25,4 +25,4 @@
 [**luckycloud**](https://gitee.com/) 
 
 ##  快速开始
-https://gitee.com/likunzhu/luckycloud/wikis/%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B
+https://gitee.com/likunzhu/luckycloud/wikis/Quick%20Start
